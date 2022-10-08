@@ -29,7 +29,7 @@ test("Request JSON", async () => {
 });
 
 test("Request Form", async () => {
-    const response=await request(app).post("/json")
+    const response=await request(app).post("/form")
                                      .send("name=Fajar")
                                      .set("Content-Type","application/x-www-form-urlencoded");
     expect(response.body).toEqual({
